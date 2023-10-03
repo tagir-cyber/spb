@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.margin-reset {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: "Prata";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Prata"),
+        /* Если не получилось, загрузит woff2 */
+        url("../fonts/prata/Prata.woff2") format("woff2"),
+        /* Если браузер не поддерживает woff2, загрузит woff */
+        url("../fonts/prata/Prata.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Raleway"),
+        /* Если не получилось, загрузит woff2 */
+        url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2"),
+        /* Если браузер не поддерживает woff2, загрузит woff */
+        url("../fonts/Raleway/Raleway-Medium.woff") format("woff");
+
+    /* 16  */
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Raleway"),
+        /* Если не получилось, загрузит woff2 */
+        url("../fonts/Raleway/Raleway-Regular.woff2") format("woff2"),
+        /* Если браузер не поддерживает woff2, загрузит woff */
+        url("../fonts/Raleway/Raleway-Regular.woff") format("woff");
+
+    /* 16, 18, 24 */
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Raleway"),
+        /* Если не получилось, загрузит woff2 */
+        url("../fonts/Raleway/Raleway-Light.woff2") format("woff2"),
+        /* Если браузер не поддерживает woff2, загрузит woff */
+        url("../fonts/Raleway/Raleway-Light.woff") format("woff");
+
+    /* 16, 18 */
+}
+
+:root{
+    --red: #AD2D11;
+    --beige: #FDFAF4;
+    --soloma: #FACA47;
+    --rale: "Raleway";
+    --prata: "Prata";
+    --w-976: 976px;
+    --w-1076: 1076px;
+    --w-1176: 1176px;
+
+    /* --width: 56.4421669%; */
+    --w-calc-56: calc(771/1366*100%);
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+body {
+    /* Raleway */
+    /* Prata */
+    font-family: "Prata";
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.title {
+    font-family: "Prata";
+    color: #AD2D11;
+    font-weight: 400;
+}
+
+.title-1 {
+    font-size: 48px;
+}
+
+.title-2 {
+    font-size: 32px;
+}
+
+.title-3 {
+    font-size: 24px;
+    font-family: "Prata";
+}
+
+.history__title-3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.header {
+    padding-top: 32px;
+    position: fixed;
+    width: 100%;
+    /* padding-bottom: 25px; */
+
+}
+
+.header__container {
+    max-width: var(--w-976);
+}
+
+.header__nav {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__list {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    /* gap: 64px; */
+    line-height: normal;
+    /* margin: 0 auto; */
+    /* width: 855px; */
+}
+
+.header__item:not(:last-child) {
+    margin-right: 64px;
+}
+
+.hiro {
+    /* background-color: rebeccapurple; */
+    background-image: url("../img/hiro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hiro__title {
+    margin-bottom: 24px;
+}
+
+.hiro__text {
+    font-family: "Raleway";
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.city {
+    padding-top: 176px;
+    padding-bottom: 124px;
+    background-color: #FDFAF4;
+}
+
+.city__container{
+    margin-bottom: 57px;
+    max-width: var(--w-1176);
+}
+
+.city__slide{
+    display: flex;
+}
+
+.city__image{
+    width: var(--w-calc-56);
+    margin-right: 124px;
+}
+
+.city__text{
+    max-width: 376px;
+    margin-bottom: 124px;
+    font-family: var(--rale);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.city__btn-box{
+    font-size: 0;
+}
+
+.city__btn-box .button{
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 1px solid var(--red);
+    margin-right: 24px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.city__left-btn{
+    background-image: url("../img/city__icon1.svg");
+}
+
+.city__right-btn{
+    background-image: url("../img/city__icon2.svg");
+}
